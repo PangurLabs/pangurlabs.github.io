@@ -24,7 +24,7 @@
       <ul>
       <li>Matterwell runs in a Google Cloud project that <strong>you</strong> own. Your mail, calendar, documents and matter records are stored in your Google account and your project, not on servers we run.</li>
       <li>Pangur Labs does not receive, store or read your Gmail, Calendar or Drive data, or the matter records the engine keeps.</li>
-      <li>Some of that data does leave your project. Your engine sends part of each new email to an email classifier (Jev, from typesafe.ai) to sort it. On matters where you turn AI on, it sends the email or filing being worked on to the AI service you choose (Claude, Gemini or OpenAI). Zoom and court websites get a little too, if you use them. These services work under your firm’s own accounts. Each is listed below, with exactly what goes.</li>
+      <li>Some of that data does leave your project. If your firm turns on mail sorting, your engine sends part of each new email to an email classifier (Jev, from typesafe.ai) to sort it. On matters where you turn AI on, it sends the email or filing being worked on to the AI service you choose (Claude, Gemini or OpenAI). Zoom and court websites get a little too, if you use them. These services work under your firm’s own accounts. Each is listed below, with exactly what goes.</li>
       <li>We never sell your information or use it for advertising.</li>
       </ul>
       <h2>Your clients’ information</h2>
@@ -92,7 +92,7 @@
       </tr>
       <tr class="even">
       <td>typesafe.ai (Jev email classifier)</td>
-      <td>Always, for new incoming mail</td>
+      <td>Only if your firm has mail sorting on (Settings &gt; AI and ethics &gt; Mail sorting), for new incoming mail</td>
       <td>The sender, subject and the first part of the message body (quoted history and signatures removed, about 1,500 characters), so it can say what kind of email it is. Attachments and court documents are never sent.</td>
       </tr>
       <tr class="odd">
@@ -119,7 +119,7 @@
       <li><strong>License checks.</strong> Once a day your engine renews your firm’s license with our license service. It sends only the license ID, the email address of your firm’s account owner, the number of active members, and the app version, plus the IP address any web request carries. It never sends client data, matter names, mail or documents. We use this only to keep your license current and to contact your account owner about the subscription.</li>
       <li><strong>Update checks.</strong> The Matterwell Mac app checks for new versions by downloading a small file from our update storage, which Google Cloud hosts for us. That request carries your IP address and the app version, as any web request does.</li>
       <li><strong>Nothing else from the app.</strong> Apart from these two checks, neither the app nor the engine sends us usage data, analytics or crash reports.</li>
-      <li><strong>Support you ask for.</strong> If you email us, share your screen with us, or send us a log or screenshot, we see what you share and use it only to help you. We ask you to leave client information out where you can.</li>
+      <li><strong>Support you ask for.</strong> If you email us, share your screen with us, send us a log or screenshot, or give us access to your Google Cloud project to fix a specific problem, we see what you share and use it only to help you. Access you grant is for that problem only and ends when it’s fixed. We ask you to leave client information out where you can.</li>
       <li><strong>Email you send us and the pilot.</strong> If you write to us or join the pilot, we keep your message and contact details (name, email, firm, practice area) to reply and to run the pilot.</li>
       <li><strong>Billing.</strong> When paid plans open, Stripe, our payment processor, collects payment details at checkout and on its billing page, under <a href="https://stripe.com/privacy">Stripe’s privacy policy</a>. We keep the billing contact, seat count and payment history. We never see full card numbers.</li>
       <li><strong>This website.</strong> The site uses no cookies and no analytics. Our web host, GitHub Pages, sees standard request logs (IP address, page, browser).</li>
