@@ -36,11 +36,12 @@
       <li>as the law requires, after telling you if the law allows.</li>
       </ul>
       <p>We don't sell Firm Data, share it for advertising, use it to train AI models, or combine it with other firms' data. We may count things (seats, sorted emails, storage used) to bill you and run the service; those counts contain no content.</p>
-      <h2 id="4-who-at-pangur-labs-can-open-firm-data">4. Who at Pangur Labs can open Firm Data</h2>
+      <h2 id="4-who-at-pangur-labs-can-reach-your-project">4. Who at Pangur Labs can reach your project</h2>
       <ul>
       <li><strong>Automated systems</strong> set up, update, back up and watch over your project. They work on Firm Data without a person reading it.</li>
-      <li><strong>People</strong> at Pangur Labs open Firm Data only through a <strong>support grant</strong> that someone authorized at your firm gives for a specific problem. Each grant is logged where your firm can see it, lasts only as long as the grant says (at most 72 hours unless you extend it), and ends when the problem is fixed, whichever comes first.</li>
-      <li><strong>Without a grant</strong>, a person at Pangur Labs opens Firm Data only to stop an active security threat to your firm or the service, or when the law requires it. We tell you each time, unless the law forbids it.</li>
+      <li><strong>Support access.</strong> When your firm wants our help, your account owner or an admin turns on Pangur Labs access in Settings &gt; System status, for 24 or 72 hours, and can end it early with End now. It lets us <strong>view</strong> your engine's service logs, its running state, its scheduled and background work, and its monitoring. It never opens your database, your documents or your mail. It ends by itself when the time runs out. Each grant and each end is written to your firm's audit log, and the app shows who gave access and until when.</li>
+      <li><strong>Firm Data itself</strong> (your matter records, documents and mail) is opened by a person at Pangur Labs only when your firm asks us to for a specific problem, to stop an active security threat to your firm or the service, or when the law requires it. We tell you each time, unless the law forbids it.</li>
+      <li><strong>What we can technically do.</strong> We run the Google Cloud organization your project lives in, so our administrators could give themselves access to your project outside these steps, and our setup service owns your project so it can build and update it. We use that power only as this section allows. Google's Cloud Audit Logs record any such access, and we'll show you those records for your project on request.</li>
       <li>Everyone at Pangur Labs who can reach the service is bound by confidentiality, signs in with two-step verification, and gets only the access their work needs.</li>
       </ul>
       <h2 id="5-subprocessors">5. Subprocessors</h2>
@@ -104,7 +105,7 @@
       <ul>
       <li><strong>One project per firm.</strong> Each hosted firm has its own Google Cloud project, its own database, its own storage and its own keys. No firm's data is in another firm's project.</li>
       <li><strong>Encryption.</strong> All connections use TLS. Google encrypts everything at rest. Keys and sign-in grants your firm adds are sealed with a key held in your project. Backups are encrypted and signed with keys in your project.</li>
-      <li><strong>Least access.</strong> The engine runs as its own service account with only the permissions it needs. Your account owner is not given control of the project, only what Settings &gt; Firm setup needs (adding the recovery kit and locking backups). Pangur Labs staff access is set out in section 4.</li>
+      <li><strong>Least access.</strong> The engine runs as its own service account with only the permissions it needs. Your account owner is not given control of the project, only what Settings &gt; Firm setup needs (adding the recovery kit and locking backups). Pangur Labs support access is read-only, time-limited and set out in section 4.</li>
       <li><strong>Sign-in.</strong> People at your firm sign in with their Google accounts. Pangur Labs staff accounts use two-step verification.</li>
       <li><strong>Backups.</strong> Hourly backups go to a storage bucket in your project with a retention period, which your firm can lock so nobody, including us, can delete a backup early.</li>
       <li><strong>Logs.</strong> The engine keeps an audit log of who did what in your firm. Service logs record health and errors.</li>
