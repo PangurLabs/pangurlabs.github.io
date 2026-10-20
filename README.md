@@ -11,7 +11,7 @@ Plain static HTML and CSS: no framework, no build step, no JavaScript.
 | -------------- | --------------------------------------------------------- |
 | `index.html`   | Landing page                                              |
 | `support.html` | Support contact and FAQ                                   |
-| `privacy.html` | Privacy policy (Matterwell; linked from every page)      |
+| `privacy.html` | Privacy policy (MatterSeal; linked from every page)      |
 | `privacy-apple.html` | Privacy policy for the App Store apps (DockStick), unlinked |
 | `style.css`    | Shared stylesheet, with automatic dark mode               |
 | `.nojekyll`    | Tells GitHub Pages to serve files as-is, without Jekyll   |
