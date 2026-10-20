@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subprocessors · MatterSeal · Pangur Labs</title>
+  <meta name="description" content="The companies that process data for hosted MatterSeal.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="site-name" href="../index.html">Pangur Labs</a>
+    </header>
+
+    <main>
+      <h1>MatterSeal hosted service: subprocessors</h1>
+      <p class="meta">Last updated October 20, 2026 · Draft pending legal review</p>
+
+      <p>This list is part of our <a href="data-processing.html">data processing agreement</a>. We'll email each customer's account owner at least 30 days before adding or replacing a subprocessor, and you can object as that agreement explains.</p>
+      <p>When we host MatterSeal for your firm, we run it in a Google Cloud project we set up for your firm alone. A subprocessor is a company we use that may process your firm's data on our behalf.</p>
+      <h2 id="our-subprocessors">Our subprocessors</h2>
+      <div class="table-wrap">
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Company</th>
+      <th>What it does for the hosted service</th>
+      <th>What it receives</th>
+      <th>Where</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>Google LLC (Google Cloud)</td>
+      <td>Runs your firm's MatterSeal project: the engine (Cloud Run), matter records (Firestore), documents being worked on and backups (Cloud Storage), keys and sign-in grants (Secret Manager, Cloud KMS), background work (Cloud Tasks) and service logs (Cloud Logging)</td>
+      <td>Everything the engine stores or works with for your firm</td>
+      <td>United States (the engine, records and backups are in us-west1, Oregon)</td>
+      </tr>
+      <tr class="even">
+      <td>TypeSafe AI (Jev email classifier)</td>
+      <td>Says what kind of email each new message is, only while your firm has mail sorting turned on</td>
+      <td>The sender, subject and the first part of the body (quoted history and signatures removed, about 1,500 characters). No attachments or court documents.</td>
+      <td>United States <strong>[confirm with TypeSafe]</strong></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <h2 id="services-you-choose-under-your-own-account">Services you choose, under your own account</h2>
+      <p>These work for your firm under your own agreement with them. They aren't our subprocessors, but the hosted engine sends them data when you turn the feature on, so we list them here.</p>
+      <div class="table-wrap">
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Service</th>
+      <th>When</th>
+      <th>What it receives</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>Your AI service, one at a time, on your firm's own key: Anthropic (Claude), Google (Gemini) or OpenAI</td>
+      <td>Only on matters where AI is turned on</td>
+      <td><strong>Filing analysis:</strong> the filing's PDFs and the notice's case details. <strong>Reply drafts</strong>, only after an attorney turns on client replies: the client's email, up to 7 earlier messages in its thread, the matter's details, and your firm's style notes and signature.</td>
+      </tr>
+      <tr class="even">
+      <td>Your Google account (Gmail or Google Workspace, Calendar, Drive)</td>
+      <td>Always</td>
+      <td>This is where your mail, events and documents are kept. MatterSeal reads and organizes them through the MatterSeal Google app you sign in with.</td>
+      </tr>
+      <tr class="odd">
+      <td>Zoom</td>
+      <td>Only if you connect your own Zoom app</td>
+      <td>The title, time and guests of meetings you create with a Zoom link.</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <h2 id="services-pangur-labs-uses-for-its-own-business">Services Pangur Labs uses for its own business</h2>
+      <p>These don't receive your firm's matter data.</p>
+      <div class="table-wrap">
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Service</th>
+      <th>Used for</th>
+      <th>What it receives</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>Stripe</td>
+      <td>Subscription checkout and billing</td>
+      <td>The billing contact and payment details</td>
+      </tr>
+      <tr class="even">
+      <td>Fastmail</td>
+      <td>Our email</td>
+      <td>Messages you send us</td>
+      </tr>
+      <tr class="odd">
+      <td>Google Cloud Storage</td>
+      <td>Hosting app update files</td>
+      <td>Each update check's IP address and app version</td>
+      </tr>
+      <tr class="even">
+      <td>Apple</td>
+      <td>Notarizing the Mac app</td>
+      <td>The app itself, not your data</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../support.html">Support</a>
+        <a href="privacy.html">MatterSeal privacy</a>
+        <a href="terms.html">MatterSeal terms</a>
+      </nav>
+      <p>© 2026 Pangur Labs LLC</p>
+    </footer>
+  </div>
+</body>
+</html>
