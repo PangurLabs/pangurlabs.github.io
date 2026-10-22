@@ -154,3 +154,107 @@ td {
 th {
   font-weight: 600;
 }
+
+/* MatterSeal product pages (matterseal/index.html, matterseal/pricing.html) */
+
+.product-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.product-mark img {
+  width: 44px;
+  height: 44px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-top: 1.25rem;
+  text-wrap: balance;
+}
+
+.hero .tagline {
+  margin-bottom: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  margin: 0 0 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  text-decoration: underline;
+}
+
+.fine {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.section-rule {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0 0;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 1.5rem;
+}
+
+.plan {
+  min-width: 0;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+
+.plan h2 {
+  margin: 0 0 0.25rem;
+}
+
+.plan .price {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0.5rem 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.plan .per {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.plan ul {
+  font-size: 0.9375rem;
+}
+
+dl.faq dt {
+  font-weight: 600;
+  margin-top: 1.25rem;
+}
+
+dl.faq dd {
+  margin: 0.25rem 0 0;
+}
