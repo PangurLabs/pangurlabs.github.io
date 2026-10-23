@@ -258,3 +258,7 @@ dl.faq dt {
 dl.faq dd {
   margin: 0.25rem 0 0;
 }
+
+.plan.wide {
+  grid-column: 1 / -1;
+}
