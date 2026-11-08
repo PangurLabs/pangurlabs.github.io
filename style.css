@@ -320,3 +320,21 @@ dl.faq dd {
   color: var(--muted);
   margin-top: 0.5rem;
 }
+
+/* Home and MatterSeal pages: text and pictures share one left edge. Text keeps a
+   readable line length; the video and screenshots use the full width. */
+.wrap.wide {
+  max-width: 1080px;
+}
+
+.wrap.wide main > *:not(.media),
+.wrap.wide header > *,
+.wrap.wide footer > * {
+  max-width: 700px;
+}
+
+.wrap.wide .media {
+  left: auto;
+  width: 100%;
+  transform: none;
+}
