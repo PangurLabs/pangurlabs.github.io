@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pangur Labs · Makers of MatterSeal</title>
-  <meta name="description" content="Pangur Labs LLC builds MatterSeal, software that turns a small law firm's Gmail, Google Calendar and Google Drive into organized matters with confirmed court deadlines. Runs on Google Cloud. Sold as a monthly subscription.">
+  <meta name="description" content="Pangur Labs LLC builds MatterSeal, software that turns a small law firm's Google Workspace mail, calendar and files into organized matters with confirmed court deadlines. Runs on Google Cloud. Sold as a monthly subscription.">
   <link rel="stylesheet" href="style.css?v=2026-11-08">
 </head>
 <body>
@@ -37,7 +37,7 @@
       </div>
 
       <h2>The problem</h2>
-      <p>Most solo lawyers and small firms run their practice out of Gmail, Google Calendar and Google Drive. A case's emails, hearings, filings and deadlines are scattered across those three places, and a missed court deadline can cost a client their case. Practice management software exists, but it usually means moving everything into a separate system, and many small firms don't use any.</p>
+      <p>Many solo lawyers and small firms run their practice in Google Workspace. A case's emails, hearings, filings and deadlines are scattered across its mail, calendar and files, and a missed court deadline can cost a client their case. Practice management software exists, but it usually means moving everything into a separate system, and many small firms don't use any.</p>
 
       <h2>What MatterSeal does</h2>
       <ul>
@@ -61,7 +61,7 @@
       <p>MatterSeal is built on Google Cloud. Each customer firm gets its own Google Cloud project, so one firm's records are kept apart from every other firm's.</p>
       <ul>
         <li>A server written in Go runs on Cloud Run in the firm's project, and keeps matter records in Firestore.</li>
-        <li>It connects to the firm's Gmail, Google Calendar and Google Drive through Google's APIs, and learns of new mail through Pub/Sub. Scheduled work runs on Cloud Tasks and Cloud Scheduler.</li>
+        <li>It connects to the firm's Google Workspace (Gmail, Google Calendar and Google Drive) through Google's APIs, and learns of new mail through Pub/Sub. Scheduled work runs on Cloud Tasks and Cloud Scheduler.</li>
         <li>Backups are encrypted and written to Cloud Storage in the firm's project. Each backup key is protected by Cloud Key Management Service and by a recovery kit the firm keeps.</li>
         <li>Secrets such as the firm's AI keys are kept in Secret Manager.</li>
         <li>For AI, each firm picks Anthropic's Claude (directly or through Google Vertex AI), OpenAI, or Google Gemini.</li>
