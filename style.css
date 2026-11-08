@@ -263,20 +263,37 @@ dl.faq dd {
   grid-column: 1 / -1;
 }
 
+/* Video and screenshots: wider than the text column on large screens, never wider than the window. */
+.media {
+  position: relative;
+  left: 50%;
+  width: min(1040px, calc(100vw - 40px));
+  transform: translateX(-50%);
+  margin: 1.25rem 0 2.5rem;
+}
+
 .demo {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  margin: 1rem 0;
-  border: 1px solid var(--rule, #ccc);
-  border-radius: 6px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  background: #fff;
 }
 
 .shots {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: 1rem;
-  margin: 1rem 0 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem 1.5rem;
+  margin-top: 1.75rem;
+}
+
+@media (max-width: 640px) {
+  .shots {
+    grid-template-columns: 1fr;
+  }
 }
 
 .shots figure {
@@ -286,12 +303,20 @@ dl.faq dd {
 .shots img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  border: 1px solid var(--rule, #ccc);
-  border-radius: 6px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.14);
+}
+
+.shots a:hover img {
+  border-color: var(--accent);
 }
 
 .shots figcaption {
   font-size: 0.9rem;
-  margin-top: 0.4rem;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-top: 0.5rem;
 }
