@@ -23,7 +23,7 @@
           <a class="button" href="mailto:hello@pangurlabs.com?subject=MatterSeal%20pilot">Join the pilot</a>
           <a href="pricing.html">See pricing</a>
         </div>
-        <p class="fine">For solo lawyers and firms of two to five who run their practice on Gmail, Google Calendar and Google Drive. MatterSeal runs on Mac today. Versions for iPhone, iPad, Windows and Android are in testing.</p>
+        <p class="fine">For solo lawyers and firms of two to five who run their practice on Gmail, Google Calendar and Google Drive. MatterSeal runs on Mac and in a web browser today. Versions for iPhone, iPad, Windows and Android are in testing.</p>
       </div>
 
       <hr class="section-rule">
@@ -60,6 +60,21 @@
         <li>Several mailboxes per firm, so a shared office address and each lawyer's own mail can all file to matters.</li>
         <li>A health records setting for matters that hold clients' medical records.</li>
       </ul>
+
+      <h2>How MatterSeal is built</h2>
+      <p>MatterSeal runs on Google Cloud. Each firm gets its own Google Cloud project, which keeps one firm's records apart from every other firm's.</p>
+      <ul>
+        <li>The MatterSeal server, written in Go, runs on Cloud Run in the firm's project and keeps matter records in Firestore.</li>
+        <li>It reads and files mail through the Gmail API, and Gmail tells it about new mail through Pub/Sub. It works with events through the Google Calendar API and with documents through the Google Drive API.</li>
+        <li>Scheduled and background work runs on Cloud Tasks and Cloud Scheduler.</li>
+        <li>Backups are encrypted before they are written to Cloud Storage. Each backup key is protected both by Cloud Key Management Service in the firm's project and by a recovery kit the firm keeps.</li>
+        <li>Keys and passwords, such as the firm's AI key, are kept in Secret Manager.</li>
+        <li>AI runs on Anthropic's Claude (directly or through Google Vertex AI), OpenAI or Google Gemini, whichever the firm picks.</li>
+        <li>People use MatterSeal in a desktop app or a web browser. With the firm's permission, AI assistants such as Claude can connect to it too, and act only as the person who connected them.</li>
+      </ul>
+
+      <h2>How firms pay</h2>
+      <p>MatterSeal is a monthly subscription. Pangur Labs runs it for a solo lawyer at $30 a month, or for a firm at $25 a month plus $30 per user, with Google Cloud costs included. A firm that wants to run MatterSeal in its own Google Cloud project pays $15 per user per month and pays Google directly. Each firm pays its AI service directly. <a href="pricing.html">See pricing</a>.</p>
 
       <h2>What MatterSeal doesn't do yet</h2>
       <ul>
