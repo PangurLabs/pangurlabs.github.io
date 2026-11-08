@@ -262,3 +262,36 @@ dl.faq dd {
 .plan.wide {
   grid-column: 1 / -1;
 }
+
+.demo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border: 1px solid var(--rule, #ccc);
+  border-radius: 6px;
+}
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.shots figure {
+  margin: 0;
+}
+
+.shots img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule, #ccc);
+  border-radius: 6px;
+}
+
+.shots figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}

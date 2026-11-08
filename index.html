@@ -3,56 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pangur Labs</title>
-  <meta name="description" content="Pangur Labs is an independent software company. We provide software for Mac, Windows, iPhone, iPad, and Android that you can host yourself.">
+  <title>Pangur Labs · Makers of MatterSeal</title>
+  <meta name="description" content="Pangur Labs LLC builds MatterSeal, software that turns a small law firm's Gmail, Google Calendar and Google Drive into organized matters with confirmed court deadlines. Runs on Google Cloud. Sold as a monthly subscription.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="wrap">
     <main>
       <h1>Pangur Labs</h1>
-      <p class="tagline">Software you can host yourself.</p>
+      <p class="tagline">We build MatterSeal: case management for small law firms that run on Google Workspace.</p>
 
-      <p>Pangur Labs is an independent software company based in Washington State. We provide software for Mac, Windows, iPhone, iPad, and Android that you can host yourself. Our apps run on your own devices, and when an app needs a server or an online account, it runs in an account you own and control, such as your own Google account.</p>
+      <p>Pangur Labs LLC is a software company in Seattle, Washington. Our product, MatterSeal, takes the email, calendar and documents a small law firm already keeps in Google Workspace and organizes them into matters (a law firm's word for a case or client project). It reads court notices, works out the deadlines that follow from court rules, and has a person at the firm confirm each one. MatterSeal is sold as a monthly subscription and runs on Google Cloud.</p>
 
-      <p>We aren’t a law firm, and we don’t provide legal, accounting, or other professional services.</p>
+      <p><a class="button" href="matterseal/index.html">See how MatterSeal works</a></p>
 
-      <p>The name comes from “Pangur Bán,” a ninth-century Irish poem about a scholar and his cat, each absorbed in their own work.</p>
+      <h2>See it working</h2>
+      <p>A tour of MatterSeal, under two minutes long,, recorded in the app with made-up sample data. There is no sound; captions explain each step.</p>
+      <video class="demo" controls muted playsinline preload="metadata" poster="matterseal/img/demo-poster.jpg">
+        <source src="matterseal/img/demo.mp4" type="video/mp4">
+        <a href="matterseal/img/demo.mp4">Download the tour (MP4)</a>
+      </video>
+      <div class="shots">
+        <figure><a href="matterseal/img/screen-ask.jpg"><img src="matterseal/img/screen-ask.jpg" alt="Two documents picked from a matter to send to AI, with what to do and the expected cost for each" loading="lazy" width="1600" height="1000"></a><figcaption>Pick documents from a matter, say what you want, and see the cost before anything goes to AI.</figcaption></figure>
+        <figure><a href="matterseal/img/screen-answer.jpg"><img src="matterseal/img/screen-answer.jpg" alt="The AI answer beside the document, with the bottom line first and links to the passages it relies on" loading="lazy" width="1600" height="1000"></a><figcaption>The answer, beside the document, pointing to the passages it relies on.</figcaption></figure>
+        <figure><a href="matterseal/img/screen-today.jpg"><img src="matterseal/img/screen-today.jpg" alt="MatterSeal's Today screen: today's hearings, deadlines and items waiting for review" loading="lazy" width="1600" height="1000"></a><figcaption>Today: hearings, deadlines and what is waiting for each person.</figcaption></figure>
+        <figure><a href="matterseal/img/screen-filing.jpg"><img src="matterseal/img/screen-filing.jpg" alt="A court filing matched to its matter, with the deadline MatterSeal proposes waiting for a person to confirm" loading="lazy" width="1600" height="1000"></a><figcaption>A court filing, matched to its matter. The deadline it proposes waits for a person to confirm it.</figcaption></figure>
+        <figure><a href="matterseal/img/screen-ai.jpg"><img src="matterseal/img/screen-ai.jpg" alt="An AI summary of a court filing, with each citation listed for a lawyer to look up and tick" loading="lazy" width="1600" height="1000"></a><figcaption>The AI summary of a filing. Each citation is listed for a lawyer to open and tick.</figcaption></figure>
+        <figure><a href="matterseal/img/screen-matters.jpg"><img src="matterseal/img/screen-matters.jpg" alt="The matters list beside one matter's page, with its stage, parties and items needing attention" loading="lazy" width="1600" height="1000"></a><figcaption>Every matter, and one page for each: stage, parties, email, drafts and deadlines.</figcaption></figure>
+        <figure><a href="matterseal/img/screen-costs.jpg"><img src="matterseal/img/screen-costs.jpg" alt="The running costs screen: Google Cloud and AI costs by day, with this month's totals" loading="lazy" width="1600" height="1000"></a><figcaption>Running costs: Google Cloud and AI, by day and month.</figcaption></figure>
+        <figure><a href="matterseal/img/screen-backups.jpg"><img src="matterseal/img/screen-backups.jpg" alt="The backups screen: a backup every 15 minutes, each checked, with the latest marked good" loading="lazy" width="1600" height="1000"></a><figcaption>Backups every 15 minutes, checked and locked against ransomware.</figcaption></figure>
+      </div>
 
-      <h2>MatterSeal</h2>
-      <p>MatterSeal is AI-capable matter management for solo lawyers and small firms who run their practice on Google: Gmail, Google Calendar and Google Drive. Gmail and Google Calendar stay exactly as they are, and MatterSeal puts every email, meeting, document and court deadline on one page per matter.</p>
+      <h2>The problem</h2>
+      <p>Most solo lawyers and small firms run their practice out of Gmail, Google Calendar and Google Drive. A case's emails, hearings, filings and deadlines are scattered across those three places, and a missed court deadline can cost a client their case. Practice management software exists, but it usually means moving everything into a separate system, and many small firms don't use any.</p>
 
-      <p>Your firm’s mail, documents and records are kept in your own Google account, not ours. For AI, you choose Anthropic’s Claude, OpenAI, or Google Gemini, using keys your firm controls. MatterSeal works with Google today, and we plan to add other mail and calendar providers.</p>
-
-      <h3>What it does today</h3>
+      <h2>What MatterSeal does</h2>
       <ul>
-        <li>Files incoming email to the right matter, with reply, forward, shared drafts and sending right from the matter.</li>
-        <li>Reads court notices and works out deadlines from court rules for the courts it supports (state and federal courts in Washington, Oregon and California so far). Each deadline stays proposed until a person confirms it, and a second person can check every one.</li>
-        <li>Shows every Google calendar, including your docket, by week, day or agenda, and creates Zoom meetings if you connect Zoom.</li>
-        <li>Keeps each matter’s documents in your Google Drive and previews them in the app.</li>
-        <li>Summarizes court filings and lists their citations, each with a lookup link and a mark showing who checked it.</li>
-        <li>Drafts replies to clients for a lawyer to edit and approve. AI can be on, ask first, or off for each matter, and every AI prompt can be edited.</li>
-        <li>Runs conflict checks across contacts, related parties and corporate families.</li>
-        <li>Sets up matters by type, with intake questions and processes, and limits who can see each matter.</li>
-        <li>Gives each person a Today list and a work queue, with escalation when court deadlines go unacknowledged.</li>
-        <li>Backs up every record to your own Google Cloud project, restorable at any time.</li>
+        <li>Files each incoming email to the right matter, and adds a Gmail label so Gmail shows the same filing.</li>
+        <li>Reads court notices and proposes the deadlines that follow from court rules, for state and federal courts in Washington, Oregon and California so far. Each deadline stays proposed until a person confirms it.</li>
+        <li>Shows each matter's email, calendar events, Google Drive documents, contacts and deadlines on one page.</li>
+        <li>Uses AI, with the firm's permission for each matter, to summarize court filings and draft replies for a lawyer to edit and approve. AI never sends email.</li>
+        <li>Shows what AI will cost before a document goes to it, lets the firm set a monthly AI budget, and shows what AI has cost by day and month.</li>
+        <li>Lists the citations in a filing for a lawyer to open and mark as checked. The citations are found by MatterSeal itself, not by AI.</li>
+        <li>Protects against ransomware: encrypted, locked backups that can't be changed or deleted until they age out, an alarm when many documents change at once, and optional protected copies of every matter document.</li>
+        <li>Runs conflict checks, and gives each person at the firm a work queue and a Today list.</li>
+        <li>Gives clients a secure portal to message the firm and share documents.</li>
+        <li>Keeps an audit log of who did what, and tells the firm when someone outside a matter can open its documents.</li>
+        <li>Under development: AI agents the firm connects to work alongside its staff, within limits the firm sets, and an AI supervision report that shows what AI and agents did on each matter and who reviewed it.</li>
       </ul>
 
-      <h3>What it costs</h3>
-      <p>MatterSeal is $15 per user per month. You pay Google directly for the computing it uses, which for a solo or small firm we expect to be under $10 a month. AI runs on your own Anthropic, OpenAI or Google account, so you control that cost. Optional email sorting uses Jev, which costs a few dollars a month. For one lawyer, we expect everything together to come to $25 to $35 a month, depending on how much you use AI.</p>
+      <h2>Who it's for</h2>
+      <p>Sole practitioners and small law firms whose email is on Google Workspace.</p>
 
-      <p>Setup follows a step-by-step guide and takes about half an hour. See <a href="matterseal/pricing.html">MatterSeal pricing</a> for both ways to run it.</p>
+      <h2>How it's built</h2>
+      <p>MatterSeal is built on Google Cloud. Each customer firm gets its own Google Cloud project, so one firm's records are kept apart from every other firm's.</p>
+      <ul>
+        <li>A server written in Go runs on Cloud Run in the firm's project, and keeps matter records in Firestore.</li>
+        <li>It connects to the firm's Gmail, Google Calendar and Google Drive through Google's APIs, and learns of new mail through Pub/Sub. Scheduled work runs on Cloud Tasks and Cloud Scheduler.</li>
+        <li>Backups are encrypted and written to Cloud Storage in the firm's project. Each backup key is protected by Cloud Key Management Service and by a recovery kit the firm keeps.</li>
+        <li>Secrets such as the firm's AI keys are kept in Secret Manager.</li>
+        <li>For AI, each firm picks Anthropic's Claude (directly or through Google Vertex AI), OpenAI, or Google Gemini.</li>
+        <li>People use MatterSeal in a desktop app (built with Tauri) or in a web browser. AI assistants such as Claude can also connect to a firm's MatterSeal, with the firm's permission.</li>
+      </ul>
 
-      <p>MatterSeal is in a pilot. To join, email <a href="mailto:hello@pangurlabs.com?subject=MatterSeal%20pilot">hello@pangurlabs.com</a>.</p>
+      <h2>Business model</h2>
+      <p>Firms pay a monthly subscription, in three plans:</p>
+      <ul>
+        <li>Solo: for one lawyer. Pangur Labs runs MatterSeal, and Google Cloud costs are included.</li>
+        <li>Firm: a charge per firm plus a charge per user. Pangur Labs runs MatterSeal, and Google Cloud costs are included.</li>
+        <li>Self-hosted: a charge per user, for firms that run MatterSeal in a Google Cloud project they own and pay Google directly.</li>
+      </ul>
+      <p>On every plan, each firm pays its AI service directly.</p>
 
-      <p>Pangur Labs also hosts MatterSeal for firms that would rather not run their own Google Cloud project: see <a href="matterseal/index.html">hosted MatterSeal</a>.</p>
+      <h2>Where we are</h2>
+      <p>Pangur Labs was founded in September 2026. MatterSeal works today and is in testing before launch. To see a demo or hear when it launches, email <a href="mailto:hello@pangurlabs.com?subject=MatterSeal">hello@pangurlabs.com</a>.</p>
+
+      <h2>Company</h2>
+      <p>Pangur Labs LLC is a Washington limited liability company. We aren't a law firm, and we don't give legal advice. MatterSeal helps a lawyer keep track of work; the lawyer stays responsible for every deadline and filing.</p>
+      <p>The name comes from "Pangur Bán," a ninth-century Irish poem about a scholar and his cat, each absorbed in their own work.</p>
 
       <h2>Contact</h2>
-      <p><a href="mailto:hello@pangurlabs.com">hello@pangurlabs.com</a></p>
+      <p><a href="mailto:hello@pangurlabs.com">hello@pangurlabs.com</a><br>Pangur Labs LLC, Seattle, Washington, United States</p>
     </main>
 
     <footer>
       <nav>
+        <a href="matterseal/index.html">MatterSeal</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
         <a rel="me" href="https://mastodon.social/@pangurlabs">Mastodon</a>
