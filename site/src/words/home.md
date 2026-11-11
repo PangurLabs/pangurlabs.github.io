@@ -7,7 +7,7 @@ description: "MatterSeal sorts a law firm's Google Workspace mail, calendar and 
 hero:
   label: "Matter management for law firms on Google Workspace"
   headline: "Your practice is already in Google Workspace."
-  headlineAccent: "MatterSeal sorts it into matters."
+  headlineAccent: "MatterSeal keeps every matter in order."
   lead: "Every email, meeting, document and court deadline on one page per matter. Your firm's mail, calendar and files stay in your Google account, exactly as they are."
   secondButton: "See how it works"
   audience: "For law firms, and lawyers practicing on their own, who run their practice on Google Workspace. MatterSeal runs on Mac and in a web browser."
