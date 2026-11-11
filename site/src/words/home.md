@@ -100,7 +100,7 @@ data:
     - title: "Your Google account"
       text: "Mail, calendar and documents stay in your firm's Google Workspace, where they are today."
     - title: "A project for your firm alone"
-      text: "Matter records are kept in a Google Cloud* project for your firm, apart from every other firm. You can run it yourself, or have Pangur Labs run it."
+      text: "Matter records are kept in a Google Cloud project for your firm, apart from every other firm. You can run it yourself, or have Pangur Labs run it."
     - title: "AI on your terms"
       text: "AI runs on your firm's own account with Anthropic, OpenAI or Google, using a key your firm holds. For each matter, AI is on, asks first, or is off. AI never sends email."
     - title: "Backups you hold the key to"
@@ -110,7 +110,7 @@ data:
 plans:
   label: "Plans"
   headline: "Two ways in"
-  lead: "Pangur Labs can run MatterSeal for you, or your firm can run it in its own Google Cloud* project. On every plan, your firm pays its AI service directly."
+  lead: "Pangur Labs can run MatterSeal for you, or your firm can run it in its own Google Cloud project. On every plan, your firm pays its AI service directly."
 
 company:
   label: "Who makes it"
@@ -127,7 +127,7 @@ faq:
   headline: "Questions"
   items:
     - q: "Where is my firm's information kept?"
-      a: "Your mail, calendar and documents stay in your firm's Google account. MatterSeal's matter records are kept in a Google Cloud* project for your firm alone. The privacy policy lists every service that receives information and what each one receives."
+      a: "Your mail, calendar and documents stay in your firm's Google account. MatterSeal's matter records are kept in a Google Cloud project for your firm alone. The privacy policy lists every service that receives information and what each one receives."
     - q: "Does AI read our files?"
       a: "Only on matters where your firm has AI on, or set to ask and a person says yes. Documents go to the AI service your firm chose, on your firm's own account. A matter with AI off gets no AI at all."
     - q: "What happens if we leave?"

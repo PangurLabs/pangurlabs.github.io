@@ -10,7 +10,7 @@ sections:
   - title: "Where it is kept"
     points:
       - "Your mail, calendar events and documents stay in your firm's Google account. MatterSeal reads them from there when it needs them."
-      - "The matter records MatterSeal keeps (which messages, events and documents belong to which matter, deadlines, notes and drafts) are stored in a Google Cloud* project for your firm alone, apart from every other firm."
+      - "The matter records MatterSeal keeps (which messages, events and documents belong to which matter, deadlines, notes and drafts) are stored in a Google Cloud project for your firm alone, apart from every other firm."
       - "On the hosted plans, that project is in the United States, in Google's Oregon region. On the self-hosted plan, it is a project your firm owns."
   - title: "Who can read it"
     points:
@@ -25,7 +25,7 @@ sections:
       - "Citations in a filing are found by MatterSeal itself, not by AI, and listed for a lawyer to open and tick."
   - title: "Backups and ransomware"
     points:
-      - "MatterSeal backs up every record to storage in your firm's project. Backups are encrypted, and each backup key is protected both by Google Cloud's* key service in your firm's project and by a recovery kit your firm keeps."
+      - "MatterSeal backs up every record to storage in your firm's project. Backups are encrypted, and each backup key is protected both by Google Cloud's key service in your firm's project and by a recovery kit your firm keeps."
       - "Your firm can lock backups so no one can change or delete one until it ages out. You can restore a single record or everything."
       - "MatterSeal raises an alarm when many documents change at once, and your firm can turn on protected copies of every matter document."
       - "Your firm can export all of its records at any time, including if a subscription lapses."
