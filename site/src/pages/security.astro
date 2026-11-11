@@ -4,7 +4,7 @@ import settings from "../settings.json";
 import { frontmatter as w } from "../words/security.md";
 const permissions = settings.legal.find((l) => l.label === "Google permissions")!.href;
 ---
-<Page title={w.title} description={w.description}>
+<Page title={w.title} description={w.description} cloudNote>
   <div class="page-head"><div class="wrap">
     <p class="label">{w.label}</p>
     <h1 class="text">{w.headline}</h1>

@@ -36,20 +36,21 @@
       "name": "Solo",
       "way": "Hosted",
       "who": "For one lawyer.",
-      "what": "Pangur Labs runs MatterSeal for you. Google Cloud costs are included."
+      "what": "Pangur Labs runs MatterSeal for you. Google Cloud* costs are included."
     },
     {
       "name": "Firm",
       "way": "Hosted",
       "who": "For a firm, charged per firm plus per user.",
-      "what": "Pangur Labs runs MatterSeal for you. Google Cloud costs are included."
+      "what": "Pangur Labs runs MatterSeal for you. Google Cloud* costs are included."
     },
     {
       "name": "Self-hosted",
       "way": "Self-hosted",
       "who": "Charged per user.",
-      "what": "MatterSeal runs in a Google Cloud project your firm owns, and your firm pays Google directly."
+      "what": "MatterSeal runs in a Google Cloud* project your firm owns, and your firm pays Google directly."
     }
   ],
-  "analyticsToken": ""
+  "analyticsToken": "",
+  "cloudNote": "* MatterSeal runs on Google Cloud today. Support for other clouds is coming soon."
 }

@@ -5,7 +5,7 @@ import { frontmatter as w } from "../words/plans.md";
 const pricing = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.pricingAsk.subject)}`;
 const demo = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.demo.subject)}`;
 ---
-<Page title={w.title} description={w.description}>
+<Page title={w.title} description={w.description} cloudNote>
   <div class="page-head"><div class="wrap">
     <p class="label">{w.label}</p>
     <h1>{w.headline}</h1>
