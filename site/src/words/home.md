@@ -29,8 +29,8 @@ steps:
 
 problem:
   label: "The problem"
-  headline: "The legal work isn't the hard part."
-  headlineAccent: "Keeping track of it is."
+  headline: "Keeping track of your practice"
+  headlineAccent: "should be easier."
   cards:
     - title: "It all lives in the inbox"
       text: "A case's emails, hearings, filings and documents are spread across mail, calendar and Drive, and only the person who read them knows where they are."
@@ -115,8 +115,12 @@ plans:
 company:
   label: "Who makes it"
   headline: "Built in Seattle"
-  text: "MatterSeal is made by Pangur Labs LLC, a software company in Seattle, Washington, founded in September 2026. MatterSeal works today and is in testing before launch."
-  disclaimer: "Pangur Labs isn't a law firm and doesn't give legal advice. MatterSeal helps a lawyer keep track of work; the lawyer stays responsible for every deadline and filing."
+  text:
+    - "MatterSeal is made by Pangur Labs LLC, a software company in Seattle, Washington, founded in September 2026."
+    - "MatterSeal works today and is in testing before launch."
+  disclaimer:
+    - "Pangur Labs isn't a law firm and doesn't give legal advice."
+    - "MatterSeal helps a lawyer keep track of work. The lawyer stays responsible for every deadline and filing."
 
 faq:
   label: "Questions lawyers ask"
