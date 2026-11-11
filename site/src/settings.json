@@ -1,0 +1,55 @@
+{
+  "product": "MatterSeal",
+  "company": "Pangur Labs LLC",
+  "companySite": "https://pangurlabs.com/",
+  "place": "Seattle, Washington",
+  "year": 2026,
+  "siteUrl": "https://matterseal.com",
+  "email": {
+    "hello": "hello@pangurlabs.com",
+    "support": "support@pangurlabs.com",
+    "privacy": "privacy@pangurlabs.com"
+  },
+  "demo": {
+    "label": "Ask for a demo",
+    "subject": "MatterSeal demo"
+  },
+  "pricingAsk": {
+    "label": "Ask about pricing",
+    "subject": "MatterSeal pricing"
+  },
+  "menu": [
+    { "label": "How it works", "href": "/how-it-works/" },
+    { "label": "Security", "href": "/security/" },
+    { "label": "Plans", "href": "/plans/" },
+    { "label": "Help", "href": "/help/" }
+  ],
+  "legal": [
+    { "label": "Privacy policy", "href": "https://pangurlabs.com/matterseal/privacy.html" },
+    { "label": "Terms of service", "href": "https://pangurlabs.com/matterseal/terms.html" },
+    { "label": "Data processing agreement", "href": "https://pangurlabs.com/matterseal/data-processing.html" },
+    { "label": "Subprocessors", "href": "https://pangurlabs.com/matterseal/subprocessors.html" },
+    { "label": "Google permissions", "href": "https://pangurlabs.com/matterseal/" }
+  ],
+  "plans": [
+    {
+      "name": "Solo",
+      "way": "Hosted",
+      "who": "For one lawyer.",
+      "what": "Pangur Labs runs MatterSeal for you. Google Cloud costs are included."
+    },
+    {
+      "name": "Firm",
+      "way": "Hosted",
+      "who": "For a firm, charged per firm plus per user.",
+      "what": "Pangur Labs runs MatterSeal for you. Google Cloud costs are included."
+    },
+    {
+      "name": "Self-hosted",
+      "way": "Self-hosted",
+      "who": "Charged per user.",
+      "what": "MatterSeal runs in a Google Cloud project your firm owns, and your firm pays Google directly."
+    }
+  ],
+  "analyticsToken": ""
+}

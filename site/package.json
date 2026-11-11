@@ -1,0 +1,22 @@
+{
+  "name": "matterseal-website",
+  "version": "1.0.0",
+  "description": "matterseal.com, built with Astro",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/build-pangurlabs.mjs",
+    "preview": "astro preview",
+    "check": "npm run build && node scripts/check.mjs",
+    "pictures": "node scripts/pictures.mjs"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "astro": "^7.4.11",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0"
+  },
+  "private": true,
+  "type": "module"
+}

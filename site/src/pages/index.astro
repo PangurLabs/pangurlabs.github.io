@@ -1,0 +1,134 @@
+---
+import Page from "../layouts/Page.astro";
+import Frame from "../components/Frame.astro";
+import settings from "../settings.json";
+import { frontmatter as w } from "../words/home.md";
+
+const demo = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.demo.subject)}`;
+const pricing = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.pricingAsk.subject)}`;
+---
+<Page title={w.title} description={w.description}>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <p class="label">{w.hero.label}</p>
+      <h1 id="hero-title">{w.hero.headline} <span class="accent-line">{w.hero.headlineAccent}</span></h1>
+      <p class="lead">{w.hero.lead}</p>
+      <div class="buttons">
+        <a class="button primary" href={demo}>{settings.demo.label}</a>
+        <a class="button secondary" href="#how">{w.hero.secondButton}</a>
+      </div>
+      <p class="audience">{w.hero.audience}</p>
+      <Frame name="today" alt={w.hero.screenAlt} eager sizes="(max-width: 1200px) 100vw, 1120px" />
+    </div>
+  </section>
+
+  <section class="section" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <h2 class="label" id="how-title">{w.steps.label}</h2>
+      <ol class="steps">
+        {w.steps.items.map((s) => <li><h3>{s.title}</h3><p>{s.text}</p></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="problem-title">
+    <div class="wrap">
+      <p class="label">{w.problem.label}</p>
+      <h2 id="problem-title">{w.problem.headline} <span class="accent-line">{w.problem.headlineAccent}</span></h2>
+      <div class="cards three">
+        {w.problem.cards.map((c) => <div class="card"><h3>{c.title}</h3><p>{c.text}</p></div>)}
+      </div>
+      <p class="closing-line">{w.problem.closing}</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="inside-title">
+    <div class="wrap">
+      <p class="label">{w.inside.label}</p>
+      <h2 id="inside-title">{w.inside.headline} <span class="accent-line">{w.inside.headlineAccent}</span></h2>
+      <div class="cards two">
+        {w.inside.cards.map((c) => (
+          <div class="card screen">
+            <h3>{c.title}</h3><p>{c.text}</p>
+            <Frame name={c.image} alt={c.alt} sizes="(max-width: 640px) 100vw, 540px" />
+          </div>
+        ))}
+      </div>
+      <div class="mini">
+        {w.inside.more.map((m) => <div><h3>{m.title}</h3><p>{m.text}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="example-title">
+    <div class="wrap">
+      <p class="label">{w.example.label}</p>
+      <h2 id="example-title">{w.example.headline}</h2>
+      <p class="lead text after-head">{w.example.intro}</p>
+      <div class="example">
+        <div>
+          <ol class="timeline">
+            {w.example.steps.map((s) => <li><h3>{s.title}</h3><p>{s.text}</p></li>)}
+          </ol>
+          <p class="note">{w.example.note}</p>
+        </div>
+        <Frame name="citations" alt={w.example.screenAlt} sizes="(max-width: 900px) 100vw, 660px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="data-title">
+    <div class="wrap">
+      <p class="label">{w.data.label}</p>
+      <h2 id="data-title" class="text">{w.data.headline}</h2>
+      <div class="points">
+        {w.data.points.map((p) => <div><h3>{p.title}</h3><p>{p.text}</p></div>)}
+      </div>
+      <p class="gap-top"><a href="/security/">{w.data.link}</a></p>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="plans-title">
+    <div class="wrap">
+      <p class="label">{w.plans.label}</p>
+      <h2 id="plans-title">{w.plans.headline}</h2>
+      <p class="lead text after-head">{w.plans.lead}</p>
+      <div class="cards three">
+        {settings.plans.map((p) => (
+          <div class="card plan"><p class="way">{p.way}</p><h3>{p.name}</h3><p class="who">{p.who}</p><p class="muted">{p.what}</p></div>
+        ))}
+      </div>
+      <div class="buttons"><a class="button secondary" href={pricing}>{settings.pricingAsk.label}</a><a class="button secondary" href="/plans/">About the plans</a></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="company-title">
+    <div class="wrap"><div class="text stack">
+      <p class="label">{w.company.label}</p>
+      <h2 id="company-title">{w.company.headline}</h2>
+      <p class="lead">{w.company.text}</p>
+      <p class="muted small">{w.company.disclaimer}</p>
+    </div></div>
+  </section>
+
+  <section class="section band" aria-labelledby="faq-title">
+    <div class="wrap">
+      <p class="label">{w.faq.label}</p>
+      <h2 id="faq-title">{w.faq.headline}</h2>
+      <div class="faq">
+        {w.faq.items.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section closing" aria-labelledby="closing-title">
+    <div class="wrap">
+      <h2 id="closing-title">{w.closing.headline}</h2>
+      <p class="lead">{w.closing.text}</p>
+      <div class="buttons">
+        <a class="button primary" href={demo}>{settings.demo.label}</a>
+        <a class="button secondary" href="/how-it-works/">{w.hero.secondButton}</a>
+      </div>
+    </div>
+  </section>
+</Page>
