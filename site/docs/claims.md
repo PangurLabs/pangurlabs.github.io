@@ -12,7 +12,7 @@ Every claim on the new site, and where it comes from. Sources:
 | --- | --- | --- |
 | Every email, meeting, document and court deadline on one page per matter (home) | Site | Same line as today's MatterSeal page |
 | Mail, calendar and files stay in your Google account (home, security, FAQ) | Site, Privacy | |
-| For solo lawyers and firms of two to five; Mac and web browser (home) | Site | No phones, iPad, Windows or Android named (plan rule) |
+| For law firms and lawyers practicing on their own, on Google Workspace; Mac and web browser (home) | Site | No phones, iPad, Windows or Android named (plan rule). Not "small firms" or "small team" (Stephen, Nov 11) |
 | Files email to its matter and adds a Gmail label; unplaced mail goes to a queue (home, how it works) | Site | |
 | Court notice matched to its matter by case number (home) | App | Filing screen says "matched by case number" |
 | Deadlines worked out from court rules, proposed until a person confirms; second check; tells the next person if not acknowledged (home, how it works) | Site, App | "Nothing is a deadline until a person confirms it" is the app's own wording |

@@ -1,16 +1,16 @@
 ---
 # The words on matterseal.com's home page. Change the words here; the layout is in src/pages/index.astro.
 # Every claim is checked against the feature list and the legal pages (docs/claims.md) before it is published.
-title: "MatterSeal: matter management for small law firms on Google Workspace"
-description: "MatterSeal sorts a small law firm's Google Workspace mail, calendar and files into matters, reads court notices and proposes deadlines for a person to confirm."
+title: "MatterSeal: matter management for law firms on Google Workspace"
+description: "MatterSeal sorts a law firm's Google Workspace mail, calendar and files into matters, reads court notices and proposes deadlines for a person to confirm."
 
 hero:
-  label: "Matter management for small law firms on Google Workspace"
+  label: "Matter management for law firms on Google Workspace"
   headline: "Your practice is already in Google Workspace."
   headlineAccent: "MatterSeal sorts it into matters."
   lead: "Every email, meeting, document and court deadline on one page per matter. Your firm's mail, calendar and files stay in your Google account, exactly as they are."
   secondButton: "See how it works"
-  audience: "For solo lawyers and firms of two to five. MatterSeal runs on Mac and in a web browser."
+  audience: "For law firms, and lawyers practicing on their own, who run their practice on Google Workspace. MatterSeal runs on Mac and in a web browser."
   screenAlt: "MatterSeal's Today page for a demo firm: two hearings today, an overdue deadline, and a list of court notices and reminders that arrived while the lawyer was in court."
 
 steps:
@@ -114,7 +114,7 @@ plans:
 
 company:
   label: "Who makes it"
-  headline: "Built by a small team in Seattle"
+  headline: "Built in Seattle"
   text: "MatterSeal is made by Pangur Labs LLC, a software company in Seattle, Washington, founded in September 2026. MatterSeal works today and is in testing before launch."
   disclaimer: "Pangur Labs isn't a law firm and doesn't give legal advice. MatterSeal helps a lawyer keep track of work; the lawyer stays responsible for every deadline and filing."
 

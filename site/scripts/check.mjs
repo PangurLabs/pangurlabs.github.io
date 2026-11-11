@@ -33,6 +33,7 @@ const banned = [
   [/\b(iPhone|iPad|Android|Windows|iOS)\b/, "a device we don't claim yet"],
   [/\b(trusted by|customers love|award|certified|SOC ?2|HIPAA compliant|bar[- ]approved)\b/i, "proof we don't have"],
   [/lorem ipsum|TODO|TBD/i, "placeholder text"],
+  [/\bsmall (team|law firms?|firms?)\b/i, "\"small team\" or \"small firms\" (Stephen, Nov 11: the site isn't only for small firms)"],
 ];
 const review = [];
 for (const f of htmlFiles) {
