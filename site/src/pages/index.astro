@@ -106,8 +106,8 @@ const pricing = `mailto:${settings.email.hello}?subject=${encodeURIComponent(set
     <div class="wrap"><div class="text stack">
       <p class="label">{w.company.label}</p>
       <h2 id="company-title">{w.company.headline}</h2>
-      <p class="lead">{w.company.text}</p>
-      <p class="muted small">{w.company.disclaimer}</p>
+      {w.company.text.map((t) => <p class="lead">{t}</p>)}
+      {w.company.disclaimer.map((t) => <p class="muted small">{t}</p>)}
     </div></div>
   </section>
 
