@@ -7,7 +7,7 @@ import { frontmatter as w } from "../words/home.md";
 const demo = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.demo.subject)}`;
 const pricing = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.pricingAsk.subject)}`;
 ---
-<Page title={w.title} description={w.description} cloudNote>
+<Page title={w.title} description={w.description}>
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
       <p class="label">{w.hero.label}</p>

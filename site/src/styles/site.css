@@ -251,8 +251,6 @@ figure > figcaption { margin-top: 10px; }
 .footer-grid a { color: var(--ink); text-decoration: none; }
 .footer-grid a:hover { color: var(--accent-text); text-decoration: underline; }
 .footer-grid .tagline { color: var(--muted); margin-top: 12px; max-width: 320px; font-size: var(--step-small); }
-.footer-note { margin-top: 32px; color: var(--muted); font-size: var(--step-small); }
-.footer-note + .footer-base { margin-top: 16px; }
 .footer-base { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: var(--step-small); }
 @media (max-width: 820px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }

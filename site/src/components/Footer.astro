@@ -1,7 +1,5 @@
 ---
 import settings from "../settings.json";
-interface Props { cloudNote?: boolean; }
-const { cloudNote = false } = Astro.props;
 ---
 <footer class="site-footer">
   <div class="wrap">
@@ -27,7 +25,6 @@ const { cloudNote = false } = Astro.props;
         <ul>{settings.legal.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
       </div>
     </div>
-    {cloudNote && <p class="footer-note">{settings.cloudNote}</p>}
     <p class="footer-base">© {settings.year} {settings.company} · {settings.place}. Pangur Labs isn't a law firm and doesn't give legal advice.</p>
   </div>
 </footer>
