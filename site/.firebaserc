@@ -1,0 +1,11 @@
+{
+  "projects": { "default": "ms-shared-website" },
+  "targets": {
+    "ms-shared-website": {
+      "hosting": {
+        "matterseal": ["ms-shared-website"],
+        "pangurlabs": ["ms-shared-website-pl"]
+      }
+    }
+  }
+}

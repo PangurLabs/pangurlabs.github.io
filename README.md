@@ -23,6 +23,11 @@ Plain static HTML and CSS: no framework, no build step, no JavaScript.
 The `CNAME` file is managed by GitHub when the custom domain is set in the
 repository's Pages settings.
 
+## The new matterseal.com site
+
+`site/` holds the new MatterSeal product site (Astro, for Firebase Hosting). It isn't published yet; see
+`site/README.md`. Nothing links to it; once merged, GitHub Pages would also serve its source files under /site/.
+
 ## Deploying
 
 Pushes to `main` deploy automatically.

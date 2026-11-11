@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import seal from "../assets/seal.png";
+import settings from "../settings.json";
+const here = Astro.url.pathname;
+const demo = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.demo.subject)}`;
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><Image src={seal} alt="" width={30} height={30} loading="eager" />{settings.product}</a>
+    <nav class="nav" aria-label="Main">
+      {settings.menu.map((m) => <a href={m.href} aria-current={here === m.href ? "page" : undefined}>{m.label}</a>)}
+      <a class="button primary" href={demo}>{settings.demo.label}</a>
+    </nav>
+    <details class="menu">
+      <summary>Menu</summary>
+      <ul>
+        {settings.menu.map((m) => <li><a href={m.href} aria-current={here === m.href ? "page" : undefined}>{m.label}</a></li>)}
+        <li><a href={demo}>{settings.demo.label}</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
