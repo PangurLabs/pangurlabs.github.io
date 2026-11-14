@@ -17,6 +17,7 @@ Plain static HTML and CSS: no framework, no build step, no JavaScript.
 | `matterseal/terms.html` | Hosted MatterSeal terms of service |
 | `matterseal/data-processing.html` | Hosted MatterSeal data processing agreement |
 | `matterseal/subprocessors.html` | Hosted MatterSeal subprocessor list |
+| `matterseal/setup.html` | Points firms that run their own server to the setup steps, which sit behind sign-in on the customer portal (account.matterseal.com/setup), never on this public site |
 | `style.css`    | Shared stylesheet, with automatic dark mode               |
 | `.nojekyll`    | Tells GitHub Pages to serve files as-is, without Jekyll   |
 
