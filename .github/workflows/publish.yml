@@ -1,0 +1,99 @@
+name: Publish website
+
+# matterseal.com on Firebase Hosting (project ms-shared-website, made by infra/platform/website.tf in
+# PangurLabs/matterseal). Signs in as ms-website-publisher with GitHub's token: no key file is stored anywhere.
+#   pull request   builds site/ and puts it on a private preview link (a Firebase preview channel, pr-<number>,
+#                  gone after 14 days). The link is in the run's summary. Nothing visitors see changes.
+#   by hand        Actions > Publish website > Run workflow on main: publishes the live site, in the "live"
+#                  environment. Run it only on Pangur Labs' "publish". Firebase keeps every earlier version.
+# Google trusts only this file in this repository, and outside pull requests only on main in the live
+# environment (website.tf), so renaming the file or the environment breaks publishing.
+# Until the project exists (site/.hosting-ready is added after it does) the jobs only build.
+
+on:
+  pull_request:
+    paths: ["site/**", ".github/workflows/publish.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: publish-${{ github.event.pull_request.number || 'live' }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  PROVIDER: projects/902148155816/locations/global/workloadIdentityPools/github/providers/website-publish
+  ACCOUNT: ms-website-publisher@ms-shared-website.iam.gserviceaccount.com
+  FIREBASE: firebase-tools@15.34.2
+
+jobs:
+  preview:
+    # Fork pull requests get no sign-in token from GitHub, so they stop here.
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - id: ready
+        run: if [ -f .hosting-ready ]; then echo ready=true >>"$GITHUB_OUTPUT"; else echo "ms-shared-website isn't set up yet; built only."; fi
+      - if: steps.ready.outputs.ready
+        uses: google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed # v2
+        with:
+          workload_identity_provider: ${{ env.PROVIDER }}
+          service_account: ${{ env.ACCOUNT }}
+      - name: Preview link
+        if: steps.ready.outputs.ready
+        env:
+          CHANNEL: pr-${{ github.event.pull_request.number }}
+        run: |
+          set -o pipefail
+          npx --yes "$FIREBASE" hosting:channel:deploy "$CHANNEL" --only matterseal --expires 14d --no-authorized-domains --json | tee out.json
+          url=$(node -e 'const r=JSON.parse(require("fs").readFileSync("out.json","utf8")).result; console.log(Object.values(r).map(s=>s.url).join(" "))')
+          echo "Preview: $url"
+          { echo "## Preview link"; echo; echo "$url"; echo; echo "Unlisted (anyone with the link can open it), gone after 14 days."; } >>"$GITHUB_STEP_SUMMARY"
+
+  live:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    environment: live
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - id: ready
+        run: if [ -f .hosting-ready ]; then echo ready=true >>"$GITHUB_OUTPUT"; else echo "ms-shared-website isn't set up yet; built only."; fi
+      - if: steps.ready.outputs.ready
+        uses: google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed # v2
+        with:
+          workload_identity_provider: ${{ env.PROVIDER }}
+          service_account: ${{ env.ACCOUNT }}
+      - name: Publish the live site
+        if: steps.ready.outputs.ready
+        run: |
+          npx --yes "$FIREBASE" deploy --only hosting:matterseal --non-interactive --message "main ${GITHUB_SHA::7}"
+          { echo "## Published"; echo; echo "https://ms-shared-website.web.app (main ${GITHUB_SHA::7})"; } >>"$GITHUB_STEP_SUMMARY"

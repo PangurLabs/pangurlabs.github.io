@@ -1,0 +1,41 @@
+---
+import Page from "../layouts/Page.astro";
+import Frame from "../components/Frame.astro";
+import { getImage } from "astro:assets";
+import poster from "../assets/tour-poster.jpg";
+import settings from "../settings.json";
+import { frontmatter as w } from "../words/how-it-works.md";
+const posterImg = await getImage({ src: poster, width: 1440, format: "webp" });
+const demo = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.demo.subject)}`;
+---
+<Page title={w.title} description={w.description}>
+  <div class="page-head"><div class="wrap">
+    <p class="label">{w.label}</p>
+    <h1 class="text">{w.headline}</h1>
+    <p class="lead">{w.lead}</p>
+  </div></div>
+  <section class="section" aria-labelledby="tour-title"><div class="wrap">
+    <h2 id="tour-title">{w.tour.title}</h2>
+    <p class="muted text after-head">{w.tour.text}</p>
+    <figure class="frame tour gap-top">
+      <div class="frame-bar" aria-hidden="true"><span></span><span></span><span></span><em>MatterSeal · demo firm</em></div>
+      <video controls preload="none" playsinline poster={posterImg.src} width="1440" height="900" aria-label="Tour of MatterSeal with demo data, no sound, with captions">
+        <source src="/media/tour.mp4" type="video/mp4" />
+      </video>
+    </figure>
+    <p class="small after-figure"><a href="/media/tour.mp4" download>{w.tour.download}</a></p>
+  </div></section>
+  <section class="section band"><div class="wrap">
+    {w.sections.map((s) => (
+      <div class="split">
+        <div><h2 class="h2-small">{s.title}</h2><p>{s.text}</p></div>
+        <Frame name={s.image} alt={s.alt} sizes="(max-width: 860px) 100vw, 660px" />
+      </div>
+    ))}
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="block"><h2>{w.courts.title}</h2><ul>{w.courts.points.map((p) => <li>{p}</li>)}</ul><p>{w.courts.other}</p></div>
+    <div class="block"><h2>{w.notYet.title}</h2><ul>{w.notYet.points.map((p) => <li>{p}</li>)}</ul></div>
+    <div class="buttons"><a class="button primary" href={demo}>{settings.demo.label}</a></div>
+  </div></section>
+</Page>

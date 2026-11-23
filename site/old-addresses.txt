@@ -1,0 +1,28 @@
+# Every address pangurlabs.com serves today (GitHub Pages, Nov 11 2026). Google's Gmail review, the Google
+# sign-in branding, Twilio and the Startups program point at some of them. The check fails if one goes missing.
+/
+/matterseal/
+/index.html
+/matterseal/data-processing.html
+/matterseal/img/demo-poster.jpg
+/matterseal/img/demo.mp4
+/matterseal/img/screen-ai.jpg
+/matterseal/img/screen-answer.jpg
+/matterseal/img/screen-ask.jpg
+/matterseal/img/screen-backups.jpg
+/matterseal/img/screen-costs.jpg
+/matterseal/img/screen-filing.jpg
+/matterseal/img/screen-matters.jpg
+/matterseal/img/screen-today.jpg
+/matterseal/img/seal-256.png
+/matterseal/img/seal-64.png
+/matterseal/index.html
+/matterseal/pricing.html
+/matterseal/privacy.html
+/matterseal/subprocessors.html
+/matterseal/terms.html
+/matterseal/texting-consent.html
+/privacy-apple.html
+/privacy.html
+/style.css
+/support.html

@@ -1,0 +1,28 @@
+---
+import Page from "../layouts/Page.astro";
+import settings from "../settings.json";
+import { frontmatter as w } from "../words/security.md";
+const permissions = settings.legal.find((l) => l.label === "Google permissions")!.href;
+---
+<Page title={w.title} description={w.description}>
+  <div class="page-head"><div class="wrap">
+    <p class="label">{w.label}</p>
+    <h1 class="text">{w.headline}</h1>
+    <p class="lead">{w.lead}</p>
+  </div></div>
+  <section class="section"><div class="wrap">
+    {w.sections.map((s) => (
+      <div class="block"><h2>{s.title}</h2><ul>{s.points.map((p) => <li>{p}</li>)}</ul></div>
+    ))}
+    <div class="block">
+      <h2>{w.google.title}</h2>
+      <p>{w.google.text}</p>
+      <p><a href={permissions}>{w.google.link}</a></p>
+    </div>
+    <div class="block">
+      <h2>Policies</h2>
+      <ul>{settings.legal.filter((l) => l.href !== permissions).map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+      <p>{w.questions} <a href={`mailto:${settings.email.privacy}`}>{settings.email.privacy}</a>.</p>
+    </div>
+  </div></section>
+</Page>

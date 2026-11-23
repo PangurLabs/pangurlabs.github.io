@@ -1,0 +1,20 @@
+---
+import Page from "../layouts/Page.astro";
+import settings from "../settings.json";
+import { frontmatter as w } from "../words/help.md";
+---
+<Page title={w.title} description={w.description}>
+  <div class="page-head"><div class="wrap">
+    <p class="label">{w.label}</p>
+    <h1>{w.headline}</h1>
+    <p class="lead">{w.lead}</p>
+  </div></div>
+  <section class="section"><div class="wrap">
+    <div class="block">
+      <p class="flush">{w.email} <a href={`mailto:${settings.email.support}`}>{settings.email.support}</a></p>
+      <h2 class="gap-top">{w.include.title}</h2>
+      <ul>{w.include.points.map((p) => <li>{p}</li>)}</ul>
+    </div>
+    <div class="block"><h2>{w.legal}</h2><ul>{settings.legal.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul></div>
+  </div></section>
+</Page>

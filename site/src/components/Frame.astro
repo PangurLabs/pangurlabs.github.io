@@ -1,0 +1,24 @@
+---
+// An app screen in a window frame. Astro makes small and large copies, and the browser picks one.
+import { Picture } from "astro:assets";
+import { screens, type ScreenName } from "../assets/screens";
+
+interface Props { name: ScreenName; alt: string; caption?: string; eager?: boolean; sizes?: string; class?: string; }
+const { name, alt, caption, eager = false, sizes = "(max-width: 900px) 100vw, 640px", class: cls = "" } = Astro.props;
+const src = screens[name];
+if (!src) throw new Error(`No screen called "${name}" in src/assets/screens.ts`);
+---
+<figure class:list={["frame", cls]}>
+  <div class="frame-bar" aria-hidden="true"><span></span><span></span><span></span><em>MatterSeal · demo firm</em></div>
+  <Picture
+    src={src}
+    alt={alt}
+    formats={["avif", "webp"]}
+    widths={[480, 800, 1200, 1600, 2400]}
+    sizes={sizes}
+    loading={eager ? "eager" : "lazy"}
+    fetchpriority={eager ? "high" : "auto"}
+    decoding="async"
+  />
+  {caption && <figcaption class="small muted">{caption}</figcaption>}
+</figure>

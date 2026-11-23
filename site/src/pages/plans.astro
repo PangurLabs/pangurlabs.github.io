@@ -1,0 +1,29 @@
+---
+import Page from "../layouts/Page.astro";
+import settings from "../settings.json";
+import { frontmatter as w } from "../words/plans.md";
+const pricing = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.pricingAsk.subject)}`;
+const demo = `mailto:${settings.email.hello}?subject=${encodeURIComponent(settings.demo.subject)}`;
+---
+<Page title={w.title} description={w.description}>
+  <div class="page-head"><div class="wrap">
+    <p class="label">{w.label}</p>
+    <h1>{w.headline}</h1>
+    <p class="lead">{w.lead}</p>
+  </div></div>
+  <section class="section"><div class="wrap">
+    <div class="cards three flush">
+      {settings.plans.map((p) => (
+        <div class="card plan"><p class="way">{p.way}</p><h2 class="plan-name">{p.name}</h2><p class="who">{p.who}</p><p class="muted">{p.what}</p></div>
+      ))}
+    </div>
+    <div class="block gap-top-large">
+      <h2>{w.every.title}</h2>
+      <ul>{w.every.points.map((p) => <li>{p}</li>)}</ul>
+    </div>
+    <div class="buttons">
+      <a class="button primary" href={pricing}>{settings.pricingAsk.label}</a>
+      <a class="button secondary" href={demo}>{settings.demo.label}</a>
+    </div>
+  </div></section>
+</Page>
