@@ -15,7 +15,7 @@
 
     <main>
       <h1>MatterSeal hosted service: subprocessors</h1>
-      <p class="meta">Last updated October 24, 2026 · Draft pending legal review</p>
+      <p class="meta">Last updated November 24, 2026 · Draft pending legal review</p>
 
       <p>This list is part of our <a href="data-processing.html">data processing agreement</a>. We'll email each customer's account owner at least 30 days before adding or replacing a subprocessor, and you can object as that agreement explains.</p>
       <p>When we host MatterSeal for your firm, we run it in a Google Cloud project we set up for your firm alone. A subprocessor is a company we use that may process your firm's data on our behalf.</p>
@@ -43,7 +43,19 @@
       <td>The sender, subject and the first part of the body (quoted history and signatures removed, about 1,500 characters). No attachments or court documents.</td>
       <td>United States (being confirmed in our agreement with TypeSafe)</td>
       </tr>
+      <tr class="even">
+      <td>Anthropic, PBC (Claude)</td>
+      <td>The AI service MatterSeal provides, when your firm chooses Claude and doesn't use its own key, only on matters where AI is turned on</td>
+      <td><strong>Filing analysis:</strong> the filing's PDFs and the notice's case details. <strong>Reply drafts</strong>, only after an attorney turns on client replies: the client's email, up to 7 earlier messages in its thread, the matter's details, and your firm's style notes and signature.</td>
+      <td>United States</td>
+      </tr>
       <tr class="odd">
+      <td>OpenAI, L.L.C.</td>
+      <td>The AI service MatterSeal provides, when your firm chooses OpenAI and doesn't use its own key, only on matters where AI is turned on</td>
+      <td>The same as for Anthropic, above.</td>
+      <td>United States</td>
+      </tr>
+      <tr class="even">
       <td>Twilio Inc.</td>
       <td>Sends and receives your firm's texts, only if your firm adds texting</td>
       <td>The phone numbers, words and pictures of each text, and its delivery status. MatterSeal deletes the words and pictures from Twilio once each text is delivered and copied to your firm's project.</td>
@@ -65,7 +77,7 @@
       </thead>
       <tbody>
       <tr class="odd">
-      <td>Your AI service, one at a time, on your firm's own key: Anthropic (Claude), Google (Gemini) or OpenAI</td>
+      <td>Your AI service, one at a time, when your firm uses its own key: Anthropic (Claude), Google (Gemini) or OpenAI. Without your own key, MatterSeal provides it: see Anthropic and OpenAI above, and Gemini runs in your firm's Google Cloud project.</td>
       <td>Only on matters where AI is turned on</td>
       <td><strong>Filing analysis:</strong> the filing's PDFs and the notice's case details. <strong>Reply drafts</strong>, only after an attorney turns on client replies: the client's email, up to 7 earlier messages in its thread, the matter's details, and your firm's style notes and signature.</td>
       </tr>

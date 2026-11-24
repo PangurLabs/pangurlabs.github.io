@@ -15,7 +15,7 @@
 
     <main>
       <h1>MatterSeal privacy policy (hosted service)</h1>
-      <p class="meta">Last updated November 7, 2026</p>
+      <p class="meta">Last updated November 24, 2026</p>
 
       <p>This is the privacy policy for hosted MatterSeal, and the one the MatterSeal Google app links to. Firms that run MatterSeal in their own Google Cloud project are covered by the <a href="../privacy.html">self-hosted privacy policy</a>.</p>
       <h2 id="who-we-are">Who we are</h2>
@@ -26,7 +26,7 @@
       <li>We run MatterSeal for your firm in a Google Cloud project we set up for your firm alone, in the United States. Your mail, events and documents stay in your Google account. The matter records MatterSeal keeps are stored in your firm's project.</li>
       <li>We process that information only to provide MatterSeal to you, as your service provider, under our <a href="data-processing.html">data processing agreement</a>.</li>
       <li>When your firm wants our help, your owner or an admin can give Pangur Labs access for up to 72 hours. It lets us view your engine's logs and health, never your database, documents or mail, and every grant is in your firm's audit log. A person at Pangur Labs opens your firm's information only when your firm asks us to for a specific problem, to stop an active security threat, or when the law requires it, and we tell you when that happens unless the law forbids it.</li>
-      <li>Some information goes to other services when you use the features that need them: part of each new email to our email classifier when mail sorting is on, and the email or filing being worked on to your own AI service on matters where you turn AI on. Each is listed below, with exactly what goes.</li>
+      <li>Some information goes to other services when you use the features that need them: part of each new email to our email classifier when mail sorting is on, and the email or filing being worked on to your firm's AI service on matters where you turn AI on, either the one MatterSeal provides or your firm's own. Each is listed below, with exactly what goes.</li>
       <li>We never sell your information, use it for advertising, or use it to train AI models.</li>
       </ul>
       <h2 id="your-clients-information">Your clients' information</h2>
@@ -99,7 +99,7 @@
       <td>The sender, subject and the first part of the message body (quoted history and signatures removed, about 1,500 characters), so it can say what kind of email it is. Attachments and court documents are never sent.</td>
       </tr>
       <tr class="odd">
-      <td>Your AI service, on your firm's own key: Anthropic (Claude), Google (Gemini) or OpenAI</td>
+      <td>Your firm's AI service: Anthropic (Claude), Google (Gemini) or OpenAI, either provided by MatterSeal (our subprocessors) or on your firm's own key</td>
       <td>Only on matters where AI is turned on, and only one service at a time</td>
       <td>Only what the feature needs. <strong>Filing analysis:</strong> the court filing's PDFs and the notice's case details (court, case number, parties, dates). <strong>Reply drafts</strong>, only after an attorney turns on client replies: the client's email and up to 7 earlier messages in its thread, the matter's name, type, stage, people and upcoming dates, and your firm's style notes and signature. Sorting incoming mail never uses it.</td>
       </tr>
@@ -122,7 +122,7 @@
       </table>
       </div>
       <p>Our current subprocessors are on the <a href="subprocessors.html">subprocessor list</a>. We'll tell customers by email at least 30 days before adding one.</p>
-      <p><strong>About the AI services.</strong> Your AI service works under your firm's own account and key, and your agreement with it governs what it does with the data. Under the terms for these paid services, none of the three uses your data to train its models. Each may keep requests for a limited time to watch for abuse. Anthropic deletes API requests within 30 days, but keeps content its safety systems flag for up to 2 years (<a href="https://privacy.claude.com/en/articles/7996866-how-long-does-anthropic-store-my-organizations-data">Anthropic's retention policy</a>). OpenAI says it keeps abuse-monitoring logs for up to 30 days. Each can arrange zero data retention with your firm. A key you paste in is stored sealed in your firm's project. If you switch to a different company's service, client reply drafts turn off until an attorney turns them on again, because what clients were told has changed.</p>
+      <p><strong>About the AI services.</strong> Unless your firm chooses to use its own key, MatterSeal provides the AI service and bills your firm for what it uses. Claude then runs under Pangur Labs' Anthropic account, Gemini runs in your firm's Google Cloud project, and OpenAI runs in an OpenAI project we make for your firm. Anthropic, Google and OpenAI are then our subprocessors, bound by our data processing agreement, and receive only what the table above lists. If your firm uses its own key, the service works under your firm's own account, and your agreement with it governs what it does with the data. Either way, under the terms for these paid services, none of the three uses your data to train its models. Each may keep requests for a limited time to watch for abuse. Anthropic deletes API requests within 30 days, but keeps content its safety systems flag for up to 2 years (<a href="https://privacy.claude.com/en/articles/7996866-how-long-does-anthropic-store-my-organizations-data">Anthropic's retention policy</a>). OpenAI says it keeps abuse-monitoring logs for up to 30 days. Zero data retention can be arranged with each. A key you paste in is stored sealed in your firm's project. If you switch to a different company's service, client reply drafts turn off until an attorney turns them on again, because what clients were told has changed.</p>
       <p><strong>Health information.</strong> If your firm turns on health information mode in Settings &gt; AI and ethics, no mail goes to the email classifier, and matters you mark as holding health information get no AI unless your firm confirms it has a business associate agreement with its AI service.</p>
       <h2 id="text-messages">Text messages</h2>
       <p>If your firm adds texting, MatterSeal gives it a phone number for texting its clients and the other people on its matters. Your firm records each person's agreement to receive texts before texting them, and MatterSeal won't text anyone who hasn't agreed. Message frequency varies with the matter. Message and data rates may apply. Anyone can reply STOP to stop texts from the firm's number, START to receive them again, or HELP for help. Texts are your firm's information and are handled like the rest of it, as described in this policy.</p>
