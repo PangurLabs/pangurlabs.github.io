@@ -15,7 +15,7 @@
 
     <main>
       <h1>MatterSeal privacy policy (hosted service)</h1>
-      <p class="meta">Last updated November 24, 2026</p>
+      <p class="meta">Last updated November 26, 2026</p>
 
       <p>This is the privacy policy for hosted MatterSeal, and the one the MatterSeal Google app links to. Firms that run MatterSeal in their own Google Cloud project are covered by the <a href="../privacy.html">self-hosted privacy policy</a>.</p>
       <h2 id="who-we-are">Who we are</h2>
@@ -25,7 +25,7 @@
       <ul>
       <li>We run MatterSeal for your firm in a Google Cloud project we set up for your firm alone, in the United States. Your mail, events and documents stay in your Google account. The matter records MatterSeal keeps are stored in your firm's project.</li>
       <li>We process that information only to provide MatterSeal to you, as your service provider, under our <a href="data-processing.html">data processing agreement</a>.</li>
-      <li>When your firm wants our help, your owner or an admin can give Pangur Labs access for up to 72 hours. It lets us view your engine's logs and health, never your database, documents or mail, and every grant is in your firm's audit log. A person at Pangur Labs opens your firm's information only when your firm asks us to for a specific problem, to stop an active security threat, or when the law requires it, and we tell you when that happens unless the law forbids it.</li>
+      <li>To keep the service working, Pangur Labs can always view your engine's logs, running state and monitoring, and can run one of your engine's own scheduled jobs early. That never opens your database, documents or mail. A person at Pangur Labs opens your firm's information itself only when your firm asks us to for a specific problem, to stop an active security threat, or when the law requires it, and we tell you when that happens unless the law forbids it. The way we do it is a request that names the person, the reason and the hours (1 to 72): your owner or an admin approves or refuses it in the app, approved access is read-only and ends by itself, and each request, answer and end is in your firm's audit log.</li>
       <li>Some information goes to other services when you use the features that need them: part of each new email to our email classifier when mail sorting is on, and the email or filing being worked on to your firm's AI service on matters where you turn AI on, either the one MatterSeal provides or your firm's own. Each is listed below, with exactly what goes.</li>
       <li>We never sell your information, use it for advertising, or use it to train AI models.</li>
       </ul>
@@ -91,7 +91,7 @@
       <tr class="odd">
       <td>Google Cloud (our subprocessor)</td>
       <td>Always</td>
-      <td>Your firm's project runs on it: the engine, matter records, working copies and backups, in Google's us-west1 region (Oregon).</td>
+      <td>Your firm's project runs on it: the engine, matter records, working copies and backups, in Google's us-west1 region (Oregon). Backup copies are also kept in a second United States region, where a standby can take over if the first fails.</td>
       </tr>
       <tr class="even">
       <td>TypeSafe AI (Jev email classifier, our subprocessor)</td>
@@ -134,7 +134,7 @@
       <li><strong>Usage counts.</strong> Seats in use and the number of emails sorted each month, to bill you and apply the sorting limit. They contain no content.</li>
       <li><strong>Service health.</strong> Whether your engine is running, its errors, and how busy it is, so we can keep it working. We don't use these logs to look at what's in your matters.</li>
       <li><strong>Update checks.</strong> The MatterSeal apps check for new versions by downloading a small file from our update storage, which Google Cloud hosts for us. That request carries your IP address and the app version. The apps send no analytics or crash reports.</li>
-      <li><strong>Support you ask for.</strong> If you email us, share your screen, send a log or screenshot, or give us Pangur Labs access (up to 72 hours, logs and health only), we see what you share and use it only to help you. We ask you to leave client information out where you can.</li>
+      <li><strong>Support you ask for.</strong> If you email us, share your screen, send a log or screenshot, or approve a request from us to read your firm's information (1 to 72 hours, read-only), we see what you share or approve and use it only to help you. We ask you to leave client information out where you can.</li>
       <li><strong>Email you send us.</strong> We keep your message and contact details to reply.</li>
       <li><strong>Billing.</strong> Stripe, our payment processor, collects payment details at checkout and on its billing page, under <a href="https://stripe.com/privacy">Stripe's privacy policy</a>. We keep the billing contact, seat count and payment history. We never see full card numbers.</li>
       <li><strong>Our websites.</strong> They use no cookies. Cloudflare Web Analytics counts page views without cookies and without following individual visitors; for each visit Cloudflare receives the page address, the referring site, browser details and IP address. Our web host sees standard request logs (IP address, page, browser), and fonts loaded from Google Fonts see the same.</li>
